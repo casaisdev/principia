@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <radialGradient id="lstar" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#fff6e0"/>
+      <stop offset="38%" stop-color="#ffd27a"/>
+      <stop offset="100%" stop-color="#e8b24c"/>
+    </radialGradient>
+    <linearGradient id="lorbit1" x1="8" y1="30" x2="112" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a8c5ff"/>
+      <stop offset="100%" stop-color="#5d76a8"/>
+    </linearGradient>
+    <linearGradient id="lorbit2" x1="100" y1="20" x2="20" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d8e4ff"/>
+      <stop offset="100%" stop-color="#7c8aa8"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="60" rx="52" ry="22" transform="rotate(-25 60 60)"
+           stroke="url(#lorbit1)" stroke-width="3.4" stroke-linecap="round" opacity="0.95"/>
+  <ellipse cx="60" cy="60" rx="40" ry="17" transform="rotate(38 60 60)"
+           stroke="url(#lorbit2)" stroke-width="2.6" stroke-linecap="round" opacity="0.75"/>
+  <circle cx="60" cy="60" r="13" fill="url(#lstar)"/>
+  <circle cx="107.1" cy="38" r="6" fill="#a8c5ff"/>
+  <circle cx="86" cy="87.7" r="4.6" fill="#f5c66b"/>
+</svg>

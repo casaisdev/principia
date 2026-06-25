@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Principia - N-body gravity sandbox</title>
+    <meta
+      name="description"
+      content="An interactive N-body gravity simulation in your browser. Drop masses and watch orbits, binary systems, and chaos emerge from a single rule: Newton's law of gravitation."
+    />
+    <meta name="theme-color" content="#06080d" />
+    <meta name="author" content="Principia" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicons: .ico for legacy browsers, .svg for modern (scales crisply),
+         apple-touch-icon for iOS home-screen. All served from /public by Vite. -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://principia.martincasais.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Principia" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://principia.martincasais.com/" />
+    <meta property="og:title" content="Principia - N-body gravity sandbox" />
+    <meta
+      property="og:description"
+      content="Drop masses and watch orbits, binary systems, and chaos emerge from Newton's law of gravitation."
+    />
+    <meta property="og:image" content="https://principia.martincasais.com/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Principia - an N-body gravity sandbox" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Principia - N-body gravity sandbox" />
+    <meta
+      name="twitter:description"
+      content="Drop masses and watch orbits, binary systems, and chaos emerge from Newton's law of gravitation."
+    />
+    <meta name="twitter:image" content="https://principia.martincasais.com/og.png" />
+    <meta name="twitter:image:alt" content="Principia - an N-body gravity sandbox" />
+
+    <!-- Structured data: helps search engines render a rich result for the app. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Principia",
+        "url": "https://principia.martincasais.com/",
+        "description": "An interactive N-body gravity simulation in the browser. Drop masses and watch orbits, binary systems, and chaos emerge from Newton's law of gravitation.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any (modern web browser)",
+        "browserRequirements": "Requires JavaScript and a modern web browser",
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

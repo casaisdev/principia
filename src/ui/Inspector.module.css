@@ -1,0 +1,129 @@
+.inspector {
+  position: absolute;
+  left: 31px;
+  bottom: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 184px;
+  padding: 12px 14px;
+  font-family: var(--mono);
+  background: var(--panel-face);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  backdrop-filter: blur(14px);
+  box-shadow: var(--panel-shadow);
+  animation: inspectorIn 0.3s ease both;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 6px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid var(--line);
+}
+
+.head span {
+  font-size: 9.5px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.close {
+  font: inherit;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--text-dim);
+  background: transparent;
+  border: none;
+  padding: 0 2px;
+  cursor: pointer;
+}
+.close:hover {
+  color: var(--text);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 18px;
+  font-size: 12px;
+}
+
+.row span {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.row b {
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.sub {
+  margin-top: 6px;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.note {
+  margin-top: 4px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.follow {
+  margin-top: 8px;
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 6px 9px;
+  cursor: pointer;
+  transition: color 0.14s, background 0.14s, border-color 0.14s;
+}
+.follow:hover {
+  color: var(--text);
+  background: rgba(150, 170, 205, 0.07);
+}
+.follow[aria-pressed='true'] {
+  color: var(--brass);
+  background: var(--brass-soft);
+  border-color: var(--brass-line);
+}
+
+@keyframes inspectorIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .inspector {
+    left: 12px;
+    bottom: 64px;
+    min-width: 0;
+    padding: 9px 11px;
+  }
+}

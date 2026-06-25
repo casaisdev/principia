@@ -1,0 +1,72 @@
+:root {
+  /* Instrument palette - cold blue-ink with warm brass illumination. */
+  --ink-900: #06080d;
+  --ink-800: #080b12;
+  --ink-700: #0b0f18;
+  --panel: rgba(11, 15, 24, 0.74);
+  /* A touch more opaque + a soft top-lit sheen, like a console face. */
+  --panel-face: linear-gradient(180deg, rgba(22, 28, 42, 0.82), rgba(8, 11, 18, 0.86));
+
+  --line: rgba(150, 170, 205, 0.14);
+  --line-strong: rgba(150, 170, 205, 0.26);
+
+  --text: #e6eaf2;
+  --text-dim: #828da3;
+  --text-faint: #4a5365;
+
+  --brass: #e8b24c;
+  --brass-bright: #ffd27a;
+  --brass-soft: rgba(232, 178, 76, 0.16);
+  --brass-line: rgba(232, 178, 76, 0.5);
+  --brass-glow: rgba(232, 178, 76, 0.28);
+
+  /* Telemetry status - kept calm and desaturated. */
+  --read-ok: #6fb39c;
+  --read-warn: #e8b24c;
+  --read-ok-glow: rgba(111, 179, 156, 0.5);
+  --read-warn-glow: rgba(232, 178, 76, 0.55);
+
+  --serif: 'Spectral', Georgia, 'Times New Roman', serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'Consolas', monospace;
+
+  /* Shared elevation for floating instrument panels. */
+  --panel-shadow: 0 18px 50px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(180, 200, 235, 0.05);
+
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--ink-900);
+  color: var(--text);
+  font-family: var(--mono);
+  overflow: hidden;
+  /* The canvas is the instrument surface; avoid accidental text selection. */
+  user-select: none;
+}
+
+:focus-visible {
+  outline: 1px solid var(--brass);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
